@@ -20,7 +20,7 @@ public class Student implements Serializable {
 
     private String studentName;
 
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     private Passport passport = new Passport();
 
     @ManyToMany(mappedBy = "students")
