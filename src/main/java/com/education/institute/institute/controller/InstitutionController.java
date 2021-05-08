@@ -30,16 +30,16 @@ public class InstitutionController {
     public ResponseEntity<Course> saveCourse(@RequestBody Course course)
     {
        Course course1= institutionService.saveCourse(course);
-
-        institutionService.saveReviews(course1);
-
+       institutionService.saveReviews(course1);
        return ResponseEntity.ok(course1);
-
-
     }
 
 
-
+    @DeleteMapping("/{course_id}")
+    public void deleteCourseDetails(@PathVariable(name = "course_id") Long course_id)
+    {
+        institutionService.deleteCourse(course_id);
+    }
 
 
 }

@@ -16,6 +16,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Cacheable
 public class Course implements Serializable {
 
     private static final long serialVersionUID = -999124665302272831L;

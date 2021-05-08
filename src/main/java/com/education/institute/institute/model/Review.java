@@ -8,7 +8,6 @@ import java.io.Serializable;
 
 @Entity
 @Data
-
 public class Review implements Serializable {
 
 
